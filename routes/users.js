@@ -1,7 +1,10 @@
 const router = require("express").Router()
-const moviesCtrl = require("../controllers/movies")
+const usersCtrl = require("../controllers/users")
 
 
+
+
+router.get("/", isLoggedIn, usersCtrl.index)
 
 
 function isLoggedIn(req, res, next) {

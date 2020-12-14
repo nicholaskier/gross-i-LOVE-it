@@ -5,6 +5,7 @@ const usersCtrl = require("../controllers/users")
 
 
 router.get("/", isLoggedIn, usersCtrl.index)
+router.get("/profile", isLoggedIn, usersCtrl.showProfile)
 
 
 function isLoggedIn(req, res, next) {

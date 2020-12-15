@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const moviesCtrl = require("../controllers/movies")
 
+router.get("/new", isLoggedIn, moviesCtrl.new)
 
 
 

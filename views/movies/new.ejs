@@ -1,7 +1,36 @@
 <%- include("../partials/header") %>
 
+<div class="container">
+    <form action="/movies/movieQuery" method="GET">
+        <button type="submit">Reveal</button>
+    </form>
+    <div class="container">
+        <% if (movie1 === null) { %>
+        <p>New Movie</p>    
+        
+        <% } else { %>
+        <p><%= movie1.title %></p>
+        <p><%= movie1.vote_average %></p>
+        <img src="https://image.tmdb.org/t/p/w500<%= movie1.poster_path %>">
+        <% } %>
+    </div>
+</div>
 
 
-
+<div class="container">
+    <form action="/movies/movieQuery2" method="GET">
+        <button type="submit">Reveal</button>
+    </form>
+    <div class="container">
+        <% if (movie2 === null) { %>
+        <p>New Movie</p>    
+        
+        <% } else { %>
+        <p><%= movie2.title %></p>
+        <p><%= movie2.vote_average %></p>
+        <img src="https://image.tmdb.org/t/p/w500<%= movie2.poster_path %>">
+        <% } %>
+    </div>
+</div>
 
 <%- include("../partials/footer") %>

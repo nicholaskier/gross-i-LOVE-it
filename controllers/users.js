@@ -3,7 +3,8 @@ const Movie = require("../models/user")
 
 module.exports = {
     index,
-    showProfile
+    showProfile,
+    show
 }
 
 function index(req, res) {
@@ -16,5 +17,19 @@ function showProfile(req, res) {
     User.findById(req.user._id)
     .then((user) => {
         res.render("users/profile", {user: req.user})
+    })
+}
+
+function show(req, res) {
+    User.findById(req.params.id)
+    .then((userInfo) => {
+        Movie.find({ favoritedBy: userInfo._id})
+        .then((movies) => {
+            res.render("users/show", {
+                userInfo,
+                user: req.user,
+                movies
+            })
+        })
     })
 }

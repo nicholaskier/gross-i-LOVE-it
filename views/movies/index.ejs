@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+
+    
+    <h3>My Shame</h3>
+
+    <% movies.forEach( movie => { %>
+      <div class="card" style="width: 35rem;">
+        <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %> </h5>
+          <p class="card-text">Synopsis: <%= movie.overview %></p>
+          <p class="card-text">User Rating: <%= movie.vote_average %></p>
+        </div>
+      </div>
+    <% }) %>
+
+</body>
+</html>

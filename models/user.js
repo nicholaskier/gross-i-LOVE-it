@@ -12,7 +12,6 @@ const userSchema = new Schema(
     email: String,
     avatar: String,
     googleId: String,
-    movieCollection: [{type: Schema. Types.ObjectId, ref: "Movie"}],
     comments: [commentSchema]
   },
   {

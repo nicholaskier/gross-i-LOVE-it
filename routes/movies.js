@@ -1,9 +1,11 @@
 const router = require("express").Router()
 const moviesCtrl = require("../controllers/movies")
 
+router.get("/", isLoggedIn, moviesCtrl.index)
 router.get("/new", isLoggedIn, moviesCtrl.new)
 router.get("/movieQuery", isLoggedIn, moviesCtrl.movieQuery)
-router.get("/movieQuery2", isLoggedIn, moviesCtrl.movieQuery2)
+router.post("/:title/collection", isLoggedIn, moviesCtrl.addToCollection)
+// router.get("/movieQuery2", isLoggedIn, moviesCtrl.movieQuery2)
 
 
 

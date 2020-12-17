@@ -4,8 +4,10 @@ const Schema = mongoose.Schema
 const movieSchema = new Schema({
     id: Number,
     title: String,
-    posterUrl: String,
-    average: Number
+    poster_path: String,
+    vote_average: Number,
+    overview: String,
+    favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }]
 })
 
 module.exports = mongoose.model("Movie", movieSchema)

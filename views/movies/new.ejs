@@ -2,7 +2,7 @@
 
 <div class="container">
     <form action="/movies/movieQuery" method="GET">
-        <button type="submit">Reveal</button>
+        <button id="reveal" type="submit">Reveal</button>
     </form>
     <div class="container">
         <% if (movie1 === null) { %>
@@ -43,6 +43,9 @@
         </form>
         <% } %>
     </div>
+    <form action="/movies/movieQuery" method="GET">
+        <button type="submit">Try Again!</button>
+    </form>
 </div>
 
 <%- include("../partials/footer") %>

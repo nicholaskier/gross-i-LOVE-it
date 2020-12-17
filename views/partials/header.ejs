@@ -16,25 +16,26 @@
     <nav>
       <ul>
         <% if (user) { %>
-        <li>
-          <a href="/auth/logout">Log Out</a>
-        </li>
-        <li>
-          <a href="/users/profile">My Info</a> 
-        </li>
-        <li>
-          <a href="/users">Other's Shame</a>
-        </li>
-        <li>
-          <a href="/movies">My Shame</a>
-        </li>
-        <li>
-          <a href="/movies/new">Do The Thing</a>
-        </li>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="/users/profile">My Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users">Other's Shame</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/movies">My Shame</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/movies/new">Do The Thing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/logout" tabindex="-1">Log Out</a>
+          </li>
         <% } else { %>
-        <li>
-          <a href="/auth/google">Login with Google</a>
-        </li>
+            <li>
+              <a href="/auth/google">Login with Google</a>
+            </li>
         <% } %>
       </ul>
     </nav>

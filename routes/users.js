@@ -6,6 +6,7 @@ const usersCtrl = require("../controllers/users")
 
 router.get("/", isLoggedIn, usersCtrl.index)
 router.get("/profile", isLoggedIn, usersCtrl.showProfile)
+router.get("/:id", isLoggedIn, usersCtrl.show)
 
 
 function isLoggedIn(req, res, next) {

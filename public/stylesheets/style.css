@@ -24,3 +24,15 @@ nav {
 #reveal :active {
   display: hidden;
 }
+
+#love {
+  width: 20px;
+  height: 20px;
+  background-image: url(/public/photos/care.png);
+}
+
+#gross {
+  width: 20px;
+  height: 20px;
+  background-image: url(/public/photos/vomit.png);
+}

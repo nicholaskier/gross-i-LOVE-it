@@ -1,13 +1,13 @@
 <%- include("../partials/header") %>
 
 <div id="movieChoice" class="container-md">
-    <form action="/movies/movieQuery" method="GET">
-        <button id="reveal" type="submit">Reveal</button>
-    </form>
+    
     <div id="movieNew" class="container">
-        <% if (movie1 === null) { %>
-        
-        
+        <% if (movie1 === null && movie2 === null) { %>
+            <form action="/movies/movieQuery" method="GET">
+                <button id="reveal" type="submit">Reveal</button>
+            </form>
+            
         <% } else { %>
         <p><%= movie1.title ? movie1.title : "N/A" %></p>
         <p>Rating:<%= movie1.vote_average %></p>
@@ -20,16 +20,13 @@
               <input type="text" hidden name="overview" value="<%= movie1.overview %>">
               <button class="btn btn-success">Add to Collection</button>
         </form>
-        <% } %>
 
 
     </div>
 
     <div id="movieNew" class="container">
-        <% if (movie2 === null) { %>
-         
         
-        <% } else { %>
+        
         <p><%= movie2.title ? movie2.title : "N/A" %></p>
         <p>Rating:<%= movie2.vote_average %></p>
         <p>Synopsis:<%= movie2.overview %></p>

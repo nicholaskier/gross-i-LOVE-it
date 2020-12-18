@@ -5,7 +5,9 @@ const ObjectId = require("mongoose").Types.ObjectId
 module.exports = {
     index,
     showProfile,
-    show
+    show,
+    addFriend,
+    removeFriend
 }
 
 function index(req, res) {
@@ -35,5 +37,23 @@ function show(req, res) {
                 movies
             })
         })
+    })
+}
+
+function addFriend(req, res) {
+    req.user.friends.push(req.params.id)
+    req.user.save()
+    .then(() => {
+      res.redirect(`/users/${req.params.id}`)
+    })
+  }
+  
+
+function removeFriend(req, res) {
+    let idx = req.user.friends.indexOf(req.params.id)
+    req.user.friends.splice(idx, 1)
+    req.user.save()
+    .then(() => {
+      res.redirect(`/users/${req.params.id}`)
     })
 }

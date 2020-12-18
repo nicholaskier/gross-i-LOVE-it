@@ -9,20 +9,34 @@
         <a href="/users/<%= userInfo._id %>/unfriend" class="btn btn-primary">Remove Friend</a>
       <% } %>
     </div>
-    <% movies.forEach((movie) => { %>
-      <div class="card" style="width: 35rem;">
-        <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
-        <div class="card-body">
-          <h5 class="card-title"><%= movie.title %> </h5>
-          <p class="card-text">Synopsis: <%= movie.overview %></p>
-          <p class="card-text">User Rating: <%= movie.vote_average %></p>
-          <form action="/movies/<%= movie.title %>/comments" method="POST">
-            <input id="love" name="love" type="image" src="/public/photos/care.png">
-            <input id="gross" name="gross" type="image" src="/public/photos/vomit.png">
-          </form>
-        </div>
-      </div>
-    <% }) %>
+    <% if (movies.length > 0) { %>
+
+      <% movies.forEach((movie) => { %>
+        <div class="card" style="width: 35rem;">
+          <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %> </h5>
+            <p class="card-text">Synopsis: <%= movie.overview %></p>
+            <p class="card-text">User Rating: <%= movie.vote_average %></p>
+            <% movie.reviews.forEach((r) => { %>
+              <p><%= r.reviewer %> - <img width="20" id="avatarPhoto" src="<%= r.reviewerPhoto %>" alt=""></p>
+              <p><%= r.rating %></p>
+              <% }) %>
+              <form action="/movies/<%= movie._id %>/reviews" method="POST">
+                <select name="rating">
+                  <option value="Gross.">Gross.</option>
+                  <option value="I Love it!">I Love it!</option>
+                </select>
+                <input type="text" hidden name="reviewer" value="<%= user.name %>">
+                <input type="text" hidden name="reviewerPhoto" value="<%= user.avatar %>">
+                <button type="submit">Review</button>
+              </form>
+            </div>
+          </div>
+      <% }) %>
+    <% } else { %>
+     <h1>This User has no movies on their shelf yet .... *sad face*</h1>
+    <% } %>
   </div>
 
 

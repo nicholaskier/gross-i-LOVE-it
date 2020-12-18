@@ -2,20 +2,28 @@
 
     
     <h3>My Shame</h3>
-
-    <% movies.forEach( movie => { %>
-      <div class="card" style="width: 35rem;">
-        <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
-        <div class="card-body">
-          <h5 class="card-title"><%= movie.title %> </h5>
-          <p class="card-text">Synopsis: <%= movie.overview %></p>
-          <p class="card-text">User Rating: <%= movie.vote_average %></p>
+    <% if (movies.length > 0) { %>
+      <% movies.forEach( movie => { %>
+        <div class="card" style="width: 35rem;">
+          <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %> </h5>
+            <p class="card-text">Synopsis: <%= movie.overview %></p>
+            <p class="card-text">User Rating: <%= movie.vote_average %></p>
+          </div>
+          <% movie.reviews.forEach((r) => { %>
+            <p><%= r.reviewer %> - <img width="20" id="avatarPhoto" src="<%= r.reviewerPhoto %>" alt=""></p>
+            <p><%= r.rating %></p>
+            <% }) %>
+          <form action="/movies/<%= movie.title %>/collection?_method=DELETE" method="POST">
+            <button type="submit">Remove</button>
+          </form>
         </div>
-        <form action="/movies/<%= movie.title %>/collection?_method=DELETE" method="POST">
-          <button type="submit">Remove</button>
-        </form>
-      </div>
-    <% }) %>
-
+        <% }) %>
+      <% } else { %>
+        <h1>Add some movies!</h1>
+        
+    <% } %> 
+        
 
     <%- include('../partials/footer') %>

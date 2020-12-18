@@ -7,10 +7,10 @@ module.exports = {
 function create(req, res) {
     Movie.findById(req.params.id)
     .then((movie) => {
-        movie.comments.push(req.body)
+        movie.reviews.push(req.body)
         movie.save()
         .then(() => {
-            res.redirect("/users")
+            res.redirect(`/users/${req.user._id}`)
         })
     })
 }

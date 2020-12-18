@@ -1,5 +1,5 @@
 body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "bebas Neue", cursive;
   background-image: url("/photos/image1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,29 +10,24 @@ body {
 }
 
 nav {
-  
+  height: 10vh;
+  width: 100vh;
 }
+
 #movieChoice {
   display: flex;
+  max-height: 30vh;
+  min-height: 30vh;
 }
 
 #movieNew {
-  background-color: grey;
+  background: none;
+  max-height: 30vh;
+  min-height: 30vh;
   
 }
 
-#reveal :active {
-  display: hidden;
-}
-
-#love {
-  width: 20px;
-  height: 20px;
-  background-image: url(/public/photos/care.png);
-}
-
-#gross {
-  width: 20px;
-  height: 20px;
-  background-image: url(/public/photos/vomit.png);
+#reveal {
+  background-color: lawngreen;
+  margin: 40vh 20vh 40vh 20vh;
 }

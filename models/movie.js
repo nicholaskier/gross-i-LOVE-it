@@ -1,10 +1,16 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const commentSchema = new Schema({
-    gross: Boolean,
-    love: Boolean,
-  })
+const reviewSchema = new Schema(
+    {
+      reviewer: String,
+      reviewerPhoto: String,
+      rating: { type: String, enum: ["Gross.", "I Love it!"] }
+    },
+    {
+      timestamps: true,
+    }
+  );
 
 const movieSchema = new Schema({
     title: String,
@@ -12,7 +18,7 @@ const movieSchema = new Schema({
     vote_average: Number,
     overview: String,
     favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
-    comments: [commentSchema],
+    reviews: [reviewSchema],
 })
 
 module.exports = mongoose.model("Movie", movieSchema)

@@ -26,15 +26,12 @@ function showProfile(req, res) {
 function show(req, res) {
     User.findById(req.params.id)
     .then((userInfo) => {
-        console.log(userInfo)
-        console.log(req.params.id)
         Movie.find({ favoritedBy: userInfo._id })
         .then((movies) => {
-            console.log(movies, "banana")
             res.render("users/show", {
                 userInfo,
                 user: req.user,
-                movies
+                movies,
             })
         })
     })

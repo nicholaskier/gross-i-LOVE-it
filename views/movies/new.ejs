@@ -10,8 +10,8 @@
             
         <% } else { %>
         <p><%= movie1.title ? movie1.title : "N/A" %></p>
-        <p>Rating:<%= movie1.vote_average %></p>
-        <p>Synopsis:<%= movie1.overview %></p>
+        <p>Rating: <%= movie1.vote_average %></p>
+        <p>Synopsis: <br> <%= movie1.overview %></p>
         <img src="https://image.tmdb.org/t/p/w300<%= movie1.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
         <form action="/movies/<%= movie1.title %>/collection" method="POST">
               <input type="text" hidden name="title" value="<%= movie1.title %>">
@@ -38,11 +38,14 @@
             <input type="text" hidden name="overview" value="<%= movie2.overview %>">
             <button class="btn btn-success">Add to Collection</button>
         </form>
-        <% } %>
     </div>
-    <form action="/movies/movieQuery" method="GET">
-        <button type="submit">Try Again!</button>
-    </form>
+    <br>
+    <div>
+        <form action="/movies/movieQuery" method="GET">
+            <button type="submit">Try Again!</button>
+        </form>
+    </div>
+    <% } %>
 </div>
 
 <%- include("../partials/footer") %>

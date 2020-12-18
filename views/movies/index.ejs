@@ -11,6 +11,9 @@
           <p class="card-text">Synopsis: <%= movie.overview %></p>
           <p class="card-text">User Rating: <%= movie.vote_average %></p>
         </div>
+        <form action="/movies/<%= movie.title %>/collection?_method=DELETE" method="POST">
+          <button type="submit">Remove</button>
+        </form>
       </div>
     <% }) %>
 

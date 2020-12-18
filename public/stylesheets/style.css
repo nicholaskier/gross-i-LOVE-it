@@ -1,11 +1,24 @@
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+  background-image: url("/photos/image1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  min-width: 100vh;
   margin: 0;
 }
 
 nav {
-  background-color: white;
+  
+}
+#movieChoice {
+  display: flex;
+}
+
+#movieNew {
+  background-color: grey;
+  
 }
 
 #reveal :active {

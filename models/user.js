@@ -8,7 +8,6 @@ const commentSchema = new Schema({
 const userSchema = new Schema(
   {
     name: String,
-    bio: String,
     email: String,
     avatar: String,
     googleId: String,

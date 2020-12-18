@@ -1,5 +1,6 @@
 const User = require("../models/user")
-const Movie = require("../models/user")
+const Movie = require("../models/movie")
+const ObjectId = require("mongoose").Types.ObjectId
 
 module.exports = {
     index,
@@ -23,8 +24,11 @@ function showProfile(req, res) {
 function show(req, res) {
     User.findById(req.params.id)
     .then((userInfo) => {
-        Movie.find({ favoritedBy: userInfo._id})
+        console.log(userInfo)
+        console.log(req.params.id)
+        Movie.find({ favoritedBy: userInfo._id })
         .then((movies) => {
+            console.log(movies, "banana")
             res.render("users/show", {
                 userInfo,
                 user: req.user,

@@ -1,12 +1,14 @@
 body {
     background-image: url('/photos/image0.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    min-width: 100vh;
+    margin: 0;
 }
 
 #Login {
-    margin: 100px 100px
+    margin: 150px 100px
 }
 
-@media only screen and (min-width: 768px) {
-   
-}

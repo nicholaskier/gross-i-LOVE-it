@@ -5,7 +5,7 @@ router.get("/", isLoggedIn, moviesCtrl.index)
 router.get("/new", isLoggedIn, moviesCtrl.new)
 router.get("/movieQuery", isLoggedIn, moviesCtrl.movieQuery)
 router.post("/:title/collection", isLoggedIn, moviesCtrl.addToCollection)
-// router.get("/movieQuery2", isLoggedIn, moviesCtrl.movieQuery2)
+router.delete("/:title/collection", isLoggedIn, moviesCtrl.removeFromCollection)
 
 
 

@@ -30,7 +30,7 @@ function addToCollection(req, res) {
    Movie.findOne({ title: req.body.title})
    .then((movie) => {
        if (movie) {
-            movie.favoritedBy.push(req.user._id)
+           movie.favoritedBy.push(req.user._id)
            movie.save()
            .then(() => {
                res.redirect("/movies/new")
@@ -39,15 +39,28 @@ function addToCollection(req, res) {
             req.body.favoritedBy = req.user._id
             Movie.create(req.body)
             .then(() => {
-                res.redirect("/movies/new")
+                const x = Math.floor(Math.random() * 200) + 1
+                const y = Math.floor(Math.random() * 19) + 1
+                axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_KEY}&language=en-US&region=US&sort_by=vote_count.asc&include_adult=false&include_video=false&page=1&vote_count.gte=25&vote_average.lte=5.5&with_runtime.gte=60&with_original_language=en&page=${x}`)
+                .then((response) => {
+                console.log(response.data.results[y])
+                    res.render("movies/new", {user: req.user, movie1 : response.data.results[y], movie2: response.data.results[y + 1]})
+                })
             })
         }
-
-   })
+     })
 }
 
 function removeFromCollection(req, res) {
-    
+    Movie.findOne( {title: req.params.title })
+    .then((movie) => {
+        let idx = movie.favoritedBy.indexOf(req.user._id)
+        movie.favoritedBy.splice(idx, 1)
+        movie.save()
+        .then(() => {
+            res.redirect("/movies")
+        })
+    })
 }
 
 function movieQuery(req, res) {
@@ -55,7 +68,7 @@ function movieQuery(req, res) {
     const y = Math.floor(Math.random() * 19) + 1
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_KEY}&language=en-US&region=US&sort_by=vote_count.asc&include_adult=false&include_video=false&page=1&vote_count.gte=25&vote_average.lte=5.5&with_runtime.gte=60&with_original_language=en&page=${x}`)
     .then((response) => {
-        console.log(response.data.results[y])
+        console.log(response.data.results)
         res.render("movies/new", {user: req.user, movie1 : response.data.results[y], movie2: response.data.results[y + 1]})
     })
 }

@@ -1,6 +1,6 @@
 body {
   font-family: "bebas Neue", cursive;
-  background-image: url("/photos/image1.jpeg");
+  background-image: url("/photos/index.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -10,7 +10,8 @@ body {
 }
 
 nav {
-  height: 10vh;
+  font-size: 1.5rem;
+  max-height: 5vh;
   width: 100vh;
 }
 

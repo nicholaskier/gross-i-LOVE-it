@@ -19,6 +19,8 @@ const movieSchema = new Schema({
     overview: String,
     favoritedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
     reviews: [reviewSchema],
+}, {
+  timestamps: true,
 })
 
 module.exports = mongoose.model("Movie", movieSchema)

@@ -1,22 +1,42 @@
 body {
+
   font-family: "bebas Neue", cursive;
-  background-image: url("/photos/index.jpg");
+  /* background-image: url("/photos/index.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 100vh; */
+  background-color: #F57C13;
   margin: 0;
 }
 
+
+
 nav {
   font-size: 3rem;
-  margin-right: 15vh;
-  margin-bottom: 15vh;
+  margin-bottom: 50px;
+  background-color: #08EE59;
 }
 
 .card {
+  padding: 20px;
+  font-size: .9rem;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  background-color: #08ee599c;
+  min-width: 150px;
+ 
+}
 
+.index {
+  margin: 0 100px 120px;
+  max-width: 30vw;
+  
+}
+
+#index {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .nav-item :hover {
@@ -36,12 +56,23 @@ nav {
   padding: 10px;
 }
 
+#refresh {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#refreshBtn {
+  background-color: #08EE59;
+
+}
+
+
 #movieChoice {
   display: flex;
-  max-height: 65vh;
-  
-  
+  max-height: 65vh; 
 }
+
 
 #movieNew {
   
@@ -50,25 +81,37 @@ nav {
 
 #movieRandom {
   max-width: 30vw;
-  font-size: 1.3rem;
-  margin: 1vh;
+  
+  /* margin: 1vh; */
   color: black;
+  margin-left: 20px;
   
 }
 
 #poster {
   max-height: 30vh;
+  max-width: 15vw;
   align-self: center;
 }
 
-#index {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+
 
 #users {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   max-width: 10vw;
   margin: 1rem;
+  background-color: #08EE59;
+  height: 75px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+
+#footer {
+  display: flex;
+  background-color: #08EE59;
+  margin-top: 60px;
+  justify-content: center;
 }

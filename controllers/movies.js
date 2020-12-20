@@ -30,7 +30,7 @@ function addToCollection(req, res) {
    Movie.findOne({ title: req.body.title})
    .then((movie) => {
        if (movie) {
-           movie.favoritedBy.push(req.user._id)
+          movie.favoritedBy.push(req.user._id)
            movie.save()
            .then(() => {
                res.redirect("/movies/new")

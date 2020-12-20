@@ -3,7 +3,7 @@
 <div id="movieChoice" class="container-md">
     
     <div id="movieNew" class="container">
-        <% if (movie1 === null && movie2 === null) { %>
+        <% if (movie1 === null || movie2 === null) { %>
             <div id="reveal">
             <form action="/movies/movieQuery" method="GET">
                 <button id="revBtn" type="submit">Click here if you dare!</button>
@@ -12,13 +12,13 @@
     </div>
             
         <% } else { %>
-        
+    
         <div id="movieRandom" class="container">
           <div class="card h-100">
-            <% if (movie1.title){ %>
-                <h1><%= movie1.title %></h1>
+            <% if (movie1.title != null){ %>
+                <h1 id="title"><%= movie1.title %></h1>
             <% } else { %>
-                <h1>"N/A"</h1>
+                <h1>N/A</h1>
             <% } %> 
             <img id="poster" src="https://image.tmdb.org/t/p/w300<%= movie1.poster_path %>"onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png">
             <p>Rating: <%= movie1.vote_average %></p>
@@ -28,17 +28,17 @@
               <input type="text" hidden name="poster_path" value="<%= movie1.poster_path %>">
               <input type="text" hidden name="vote_average" value="<%= movie1.vote_average %>">
               <input type="text" hidden name="overview" value="<%= movie1.overview %>">
-              <button class="btn btn-success">Add to Collection</button>
+              <button id="add" class="btn btn-success">Add to Collection</button>
             </form>
          </div>
         </div>
         <div id="movieRandom" class="container">
           <div class="card h-100">
         
-            <% if (movie2.title){ %>
-                <h1><%= movie2.title %></h1>
+            <% if (movie2.title != null){ %>
+                <h1 id="title"><%= movie2.title %></h1>
             <% } else { %>
-                <h1>"N/A"</h1>
+                <h1>N/A</h1>
             <% } %> 
             <img id="poster" src="https://image.tmdb.org/t/p/w300<%= movie2.poster_path %>" onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png">
             <p>Rating:<%= movie2.vote_average %></p>
@@ -48,7 +48,7 @@
                 <input type="text" hidden name="poster_path" value="<%= movie2.poster_path %>">
                 <input type="text" hidden name="vote_average" value="<%= movie2.vote_average %>">
                 <input type="text" hidden name="overview" value="<%= movie2.overview %>">
-                <button class="btn btn-success">Add to Collection</button>
+                <button id="add" class="btn btn-success">Add to Collection</button>
             </form>
          </div>
         </div>

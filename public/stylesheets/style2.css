@@ -9,7 +9,23 @@ body {
     font-family: "bebas Neue", cursive
 }
 
-#Login {
-    margin: 150px 100px
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+
+.child {
+    padding-top: 90vh;
+}
+
+#login {
+    font-size: 3rem;
+    background-color: #f57c13;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
 

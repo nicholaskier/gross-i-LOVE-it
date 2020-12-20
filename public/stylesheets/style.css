@@ -10,25 +10,58 @@ body {
 }
 
 nav {
-  font-size: 1.5rem;
-  max-height: 5vh;
-  width: 100vh;
+  font-size: 3rem;
+  margin-right: 15vh;
+  margin-bottom: 15vh;
+}
+
+.nav-item :hover {
+  text-decoration: underline;
+}
+
+#reveal {
+  justify-content: center;
+  align-content: center;
+}
+
+#revBtn {
+  background-color: #08EE59;
+  margin-top: 25vh;
+  margin-left: 25vh;
+  font-size: 5rem;
+  padding: 10px;
 }
 
 #movieChoice {
   display: flex;
   max-height: 30vh;
-  min-height: 30vh;
+  
 }
 
 #movieNew {
   background: none;
-  max-height: 30vh;
-  min-height: 30vh;
-  
+  display: flex;
 }
 
-#reveal {
-  background-color: lawngreen;
-  margin: 40vh 20vh 40vh 20vh;
+#movieRandom {
+  font-size: 1.3rem;
+  margin: 1vh;
+  color: black;
+  height: 40vh;
+  width: 70vh;
+  background-color:rgba(227, 227, 255, 0.692);
 }
+
+#poster {
+  align-self: center;
+}
+
+#index {
+  display: flex;
+}
+
+/* #indexed {
+  height: 400px;
+  width: 300px;
+  background-color:rgba(106, 106, 250, 0.5)
+} */

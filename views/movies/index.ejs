@@ -1,10 +1,12 @@
 <%- include("../partials/header") %>
 
     
-    <h3>My Shame</h3>
+    <h1>My Shame</h3>
+
+    <div id="index">
     <% if (movies.length > 0) { %>
       <% movies.forEach( movie => { %>
-        <div class="card" style="width: 35rem;">
+        <div id="indexed" class="card" style="width: 35rem;">
           <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %> </h5>
@@ -20,6 +22,7 @@
           </form>
         </div>
         <% }) %>
+    </div>
       <% } else { %>
         <h1>Add some movies!</h1>
         <a href="/movies/new">Here!</a>

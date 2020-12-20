@@ -6,13 +6,14 @@
     <div id="index">
     <% if (movies.length > 0) { %>
       <% movies.forEach( movie => { %>
-        <div id="indexed" class="card" style="width: 35rem;">
-          <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
-          <div class="card-body">
-            <h5 class="card-title"><%= movie.title %> </h5>
-            <p class="card-text">Synopsis: <%= movie.overview %></p>
-            <p class="card-text">User Rating: <%= movie.vote_average %></p>
-          </div>
+       
+          <div id="indexed" class="card h-100" style="width: 35rem;">
+            <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title"><%= movie.title %> </h5>
+              <p class="card-text">Synopsis: <%= movie.overview %></p>
+              <p class="card-text">User Rating: <%= movie.vote_average %></p>
+            </div>
           <% movie.reviews.forEach((r) => { %>
             <p><%= r.reviewer %> - <img width="20" id="avatarPhoto" src="<%= r.reviewerPhoto %>" alt=""></p>
             <p><%= r.rating %></p>
@@ -21,11 +22,14 @@
             <button type="submit">Remove</button>
           </form>
         </div>
+      
         <% }) %>
     </div>
       <% } else { %>
+      <div>
         <h1>Add some movies!</h1>
-        <a href="/movies/new">Here!</a>
+        <h2><a href="/movies/new">Here!</a></h2>
+      </div>
     <% } %> 
         
 

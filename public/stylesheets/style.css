@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100vh;
-  min-width: 100vh;
+  min-width: 100vw;
   margin: 0;
 }
 
@@ -13,6 +13,10 @@ nav {
   font-size: 3rem;
   margin-right: 15vh;
   margin-bottom: 15vh;
+}
+
+.card {
+
 }
 
 .nav-item :hover {
@@ -34,34 +38,37 @@ nav {
 
 #movieChoice {
   display: flex;
-  max-height: 30vh;
+  max-height: 65vh;
+  
   
 }
 
 #movieNew {
-  background: none;
+  
   display: flex;
 }
 
 #movieRandom {
+  max-width: 30vw;
   font-size: 1.3rem;
   margin: 1vh;
   color: black;
-  height: 40vh;
-  width: 70vh;
-  background-color:rgba(227, 227, 255, 0.692);
+  
 }
 
 #poster {
+  max-height: 30vh;
   align-self: center;
 }
 
 #index {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-/* #indexed {
-  height: 400px;
-  width: 300px;
-  background-color:rgba(106, 106, 250, 0.5)
-} */
+#users {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 10vw;
+  margin: 1rem;
+}

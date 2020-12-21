@@ -77,4 +77,4 @@ My main takeaways are:
 
 ### Technologies Used
 
-HTML, CSS, JS, Node.JS, Express, MongoDB, Mongoose, Method-Override, Axios, Passport, Google OAuth, EJS, Dotenv
+HTML, CSS, JS, Node.JS, Express, MongoDB, Mongoose, Method-Override, Axios, Passport, Google OAuth, EJS, Dotenv, GitHub, Heroku

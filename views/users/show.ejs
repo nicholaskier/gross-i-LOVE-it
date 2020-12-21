@@ -7,7 +7,7 @@
       <div id="index">
       <% movies.forEach((movie) => { %>
         <div class="card" style="width: 35rem;">
-          <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror="src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png"">
+          <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png">
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %> </h5>
             <p class="card-text">Synopsis: <%= movie.overview %></p>

@@ -73,7 +73,4 @@ Massive thanks to my GA SEI cohort instructors, TA's and fellows for all the ass
 
 ### Technologies Used
 
-HTML, CSS, JS
-Node.JS, Express, MongoDB, Mongoose
-Method-Override, Axios, Passport, Google OAuth
-EJS, Dotenv
+HTML, CSS, JS, Node.JS, Express, MongoDB, Mongoose, Method-Override, Axios, Passport, Google OAuth, EJS, Dotenv

@@ -68,7 +68,7 @@ My main takeaways are:
 
 -Movie data provided by [The MovieDB](https://www.themoviedb.org/)
 
--Vomiting Heart illustration provided by Kyle Groover
+-"Vomiting Heart" illustration provided by Kyle Groover
 @gem.tooth on Instagram
 
 -Styling tools provided by Bootstrap.

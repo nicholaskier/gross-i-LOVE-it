@@ -65,10 +65,12 @@ My main takeaways are:
 ## Attributions and Special Thanks
 
 -Movie data provided by [The MovieDB](https://www.themoviedb.org/)
+
 -Vomiting Heart illustration provided by Kyle Groover
 @gem.tooth on Instagram
 
 -Styling tools provided by Bootstrap.
+
 -Massive thanks to my GA SEI cohort instructors, TA's and fellows for all the assists and laughs.
 
 ### Technologies Used

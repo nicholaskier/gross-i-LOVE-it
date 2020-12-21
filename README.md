@@ -15,9 +15,8 @@ A fun, movie-collection app that only allows the worst of the worst from the arc
 1. AAV, I should find myself on a home page, asking me to log in with Google OAuth and I should be able to click a button that redirects me to Google to sign in.
 2. AAU, once signed in, I should find myself on the game page and prompted to click and reveal the random titles underneath. 
 3. AAU, I should be able to pick one or the other movie and add it to my collection, OR click refresh to try again.
-4. AAU, I should be able to see my profile view. Containing my avatar, email and friend list.
-5. AAU, I should be able to see my library of saved movies and the emoji responses left by other users.
-6. AAU, I should be able to see an index of users, be able to add them to my friend list and be able to click on their names to get their movie library view and leave my own emoji's on their separate titles.
+4. AAU, I should be able to see my library of saved movies and the responses left by other users.
+5. AAU, I should be able to see an index of users and be able to click on their names to get their movie library view and leave my own responses on their separate titles.
 
 ## Wire-Frames
 
@@ -29,13 +28,14 @@ A fun, movie-collection app that only allows the worst of the worst from the arc
 
 ![Home](public/photos/homepage.png)
 ![Choose](public/photos/choose.png)
-![Index](public/photos/image0.jpeg)
+![Index](public/photos/indexpage.png)
 
 ## Trello Planning
 
 ![Trello](https://trello.com/b/In0IadKA/gross-i-love-it)
 
 ## Icebox Features
+
 1. AAU, I should be able to select one movie and be offered two new movies that have something in common with the first (i.e. Director, Actors, Writers)
 2. AAU, I should be able to add users or delete users to my friend's list to keep easier tabs on movie collections that I would like to follow.
 3. AAU, I should be able to click a link under each title that brings me to where I might be able to view that title (i.e. Netflix, Amazon etc.)

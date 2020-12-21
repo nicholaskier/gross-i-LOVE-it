@@ -8,11 +8,7 @@ Netflix, Amazon, Rotten Tomatoes. They all try to point us in the direction of q
 Gross, I Love It! To the rescue!
 A fun, movie-collection app that only allows the worst of the worst from the archives over at The MovieDB!
 
-## Wire-Frames
 
-![Home](public/photos/wireframehome.png)
-![User](public/photos/wireframeuser.png)
-![UserIndex](public/photos/wireframusersindex.png)
 
 ## Goals
 
@@ -23,11 +19,21 @@ A fun, movie-collection app that only allows the worst of the worst from the arc
 5. AAU, I should be able to see my library of saved movies and the emoji responses left by other users.
 6. AAU, I should be able to see an index of users, be able to add them to my friend list and be able to click on their names to get their movie library view and leave my own emoji's on their separate titles.
 
+## Wire-Frames
+
+![Home](public/photos/wireframehome.png)
+![User](public/photos/wireframeuser.png)
+![UserIndex](public/photos/wireframusersindex.png)
+
 ## Screenshots
 
 ![Home](public/photos/homepage.png)
 ![Choose](public/photos/choose.png)
 ![Index](public/photos/image0.jpeg)
+
+## Trello Planning
+
+![Trello](https://trello.com/b/In0IadKA/gross-i-love-it)
 
 ## Icebox Features
 1. AAU, I should be able to select one movie and be offered two new movies that have something in common with the first (i.e. Director, Actors, Writers)

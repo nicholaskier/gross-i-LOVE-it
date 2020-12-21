@@ -32,7 +32,7 @@ A fun, movie-collection app that only allows the worst of the worst from the arc
 
 ## Trello Planning
 
-![Trello](https://trello.com/b/In0IadKA/gross-i-love-it)
+[Trello](https://trello.com/b/In0IadKA/gross-i-love-it)
 
 ## Icebox Features
 

@@ -20,6 +20,7 @@ nav {
   text-overflow: ellipsis;
   background-color: #08ee599c;
   min-width: 150px;
+  
  
 }
 
@@ -32,6 +33,13 @@ nav {
 #index {
   display: flex;
   flex-flow: row wrap;
+  padding: 20px;
+  font-size: 1.3rem;
+  overflow: visible;
+  text-overflow: ellipsis;
+  background-color: #08ee599c;
+  min-width: 150px;
+ 
 }
 
 .nav-item :hover {
@@ -118,7 +126,10 @@ nav {
 
 #footer {
   display: flex;
-  background-color: #08EE59;
-  margin-top: 60px;
+  margin: 10px;
   justify-content: center;
+}
+
+#header {
+  margin-left: 150px;
 }

@@ -23,12 +23,12 @@ body {
 #login {
     font-size: 3rem;
     background-color: #f57c13;
-    padding: 10px 20px;
-    border-radius: 16px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1rem;
 }
 #footer {
     display: flex;
-    margin: 15px;
+    margin: 0.938rem;
     justify-content: center;
     
   }

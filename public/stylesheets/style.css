@@ -7,23 +7,23 @@ body {
 
 nav {
   font-size: 3rem;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   background-color: #08EE59;
 }
 
 .card {
-  padding: 20px;
+  padding: 1.25rem;
   font-size: 1.3rem;
   overflow: scroll;
   text-overflow: ellipsis;
   background-color: #08ee599c;
-  min-width: 150px;
+  min-width: 9.375rem;
   
  
 }
 
 .index {
-  margin: 0 100px 120px;
+  margin: 0 6.25rem 7.5rem;
   max-width: 30vw;
   
 }
@@ -31,12 +31,12 @@ nav {
 #index {
   display: flex;
   flex-flow: row wrap;
-  padding: 20px;
+  padding: 1.25rem;
   font-size: 1.3rem;
   overflow: visible;
   text-overflow: ellipsis;
   background-color: #08ee599c;
-  min-width: 150px;
+  min-width: 9.375rem;
  
 }
 
@@ -54,7 +54,7 @@ nav {
   margin-top: 25vh;
   margin-left: 25vh;
   font-size: 5rem;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 #add {
@@ -68,7 +68,7 @@ nav {
 #refresh {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   font-size: 4rem;
 }
 
@@ -97,7 +97,7 @@ nav {
   
   /* margin: 1vh; */
   color: black;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   
 }
 
@@ -113,19 +113,19 @@ nav {
   max-width: 10vw;
   margin: 1rem;
   background-color: #08EE59;
-  height: 75px;
-  width: 200px;
-  padding: 10px;
-  border-radius: 16px;
+  height: 4.688rem;
+  width: 12.5rem;
+  padding: 0.625rem;
+  border-radius: 1rem;
 }
 
 #footer {
   display: flex;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   
   justify-content: center;
 }
 
 #header {
-  margin-left: 150px;
+  margin-left: 9.375rem;
 }

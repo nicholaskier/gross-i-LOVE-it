@@ -16,7 +16,7 @@
               <p><%= r.reviewer %> - <img width="20" id="avatarPhoto" src="<%= r.reviewerPhoto %>" alt=""></p>
               <p><%= r.rating %></p>
               <% }) %>
-              <form action="/movies/<%= movie._id %>/reviews" method="POST">
+              <form action="/movies/<%= movie._id %>/reviews/<%= userInfo.id %>" method="POST">
                 <select name="rating">
                   <option value="Gross.">Gross.</option>
                   <option value="I Love it!">I Love it!</option>

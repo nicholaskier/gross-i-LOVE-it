@@ -10,7 +10,7 @@ function create(req, res) {
         movie.reviews.push(req.body)
         movie.save()
         .then(() => {
-            res.redirect(`/users/${req.user._id}`)
+            res.redirect(`/users/${req.params.userInfoId}`)
         })
     })
 }

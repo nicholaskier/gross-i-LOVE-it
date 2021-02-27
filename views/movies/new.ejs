@@ -22,6 +22,9 @@
             <% } %> 
             <img id="poster" src="https://image.tmdb.org/t/p/w300<%= movie1.poster_path %>"onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png">
             <p>Rating: <%= movie1.vote_average %></p>
+            <% if (movie1.overview.length > 75){ %>
+                <p>(Scroll for More)</p>
+            <% } %>
             <p id="synopsis">Synopsis: <br> <%= movie1.overview %></p>
             <form action="/movies/<%= movie1.title %>/collection" method="POST">
               <input type="text" hidden name="title" value="<%= movie1.title %>">
@@ -42,6 +45,9 @@
             <% } %> 
             <img id="poster" src="https://image.tmdb.org/t/p/w300<%= movie2.poster_path %>" onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png">
             <p>Rating:<%= movie2.vote_average %></p>
+            <% if (movie1.overview.length > 75){ %>
+                <p>(Scroll for More)</p>
+            <% } %>
             <p id="synopsis">Synopsis: <br> <%= movie2.overview %></p>
             <form action="/movies/<%= movie2.title %>/collection" method="POST">
                 <input type="text" hidden name="title" value="<%= movie2.title %>">

@@ -129,3 +129,15 @@ nav {
 #header {
   margin-left: 9.375rem;
 }
+
+::-webkit-scrollbar {
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+}

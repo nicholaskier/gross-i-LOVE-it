@@ -1,14 +1,17 @@
 <%- include('../partials/header') %>
-
+<div class="container" id="userIndex">
 <% users.forEach(u => { %>
+  <% if (u.name == user.name) { %>
+  <% } else { %>
+  <div id="users">
     <a href="/users/<%= u._id %>">
-      <div id="users">
         <div >
           <img height="50" id="avatarPhoto" src="<%= u.avatar ? u.avatar : 'http://theoldreader.com/kittens/300/300/' %>" alt=""> 
           <%= u.name %></a> 
         </div>
       </div><br>
-  <% }) %>
-
+  <% } %>
+<% }) %>
+</div>
   <%- include('../partials/footer') %>
   

@@ -7,7 +7,7 @@
     <% if (movies.length > 0) { %>
       <% movies.forEach( movie => { %>
        
-          <div class="card" style="width: 35rem;">
+          <div class="card" style="margin: .5rem; width: 35rem;">
             <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" onerror src="https://www.theprintworks.com/wp-content/themes/psBella/assets/img/film-poster-placeholder.png" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title"><%= movie.title %> </h5>

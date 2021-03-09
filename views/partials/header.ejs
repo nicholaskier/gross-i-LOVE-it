@@ -15,10 +15,14 @@
     <title>GROSS</title>
   </head>
   <body>
-    <nav>
-      <ul>
+    <nav class="navbar navbar-expand-lg">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <% if (user) { %>
-        <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link" href="/movies/new">Press Your Luck</a>
           </li>
@@ -32,9 +36,11 @@
             <a class="nav-link" href="/auth/logout" tabindex="-1">Log Out</a>
           </li>
         <% } else { %>
-            <li>
-              <a href="/auth/google">Login with Google</a>
+            <li class="nav-item">
+              <a class="nav-item" href="/auth/google">Login with Google</a>
             </li>
         <% } %>
+         
       </ul>
+    </div>
     </nav>

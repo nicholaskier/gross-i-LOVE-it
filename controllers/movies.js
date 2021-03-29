@@ -41,7 +41,7 @@ function addToCollection(req, res) {
                 const y = Math.floor(Math.random() * 19) + 1
                 axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_KEY}&language=en-US&region=US&sort_by=vote_count.asc&include_adult=false&include_video=false&page=1&vote_count.gte=25&vote_average.lte=5.5&with_runtime.gte=60&with_original_language=en&page=${x}`)
                 .then((response) => {
-                console.log(response.data.results[y])
+                // console.log(response.data.results[y])
                     res.render("movies/new", {user: req.user, movie1 : response.data.results[y], movie2: response.data.results[y + 1]})
                 })
             })
@@ -66,9 +66,10 @@ function movieQuery(req, res) {
     const y = Math.floor(Math.random() * 19) + 1
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.MOVIE_DB_KEY}&language=en-US&region=US&sort_by=vote_count.asc&include_adult=false&include_video=false&page=1&vote_count.gte=25&vote_average.lte=5.5&with_runtime.gte=60&with_original_language=en&page=${x}`)
     .then((response) => {
-        console.log(response.data.results)
+        // console.log(response.data.results)
         if (response.data.results[y] != null && response.data.results[y +1] != null) {
             res.render("movies/new", {user: req.user, movie1 : response.data.results[y], movie2: response.data.results[y + 1]})
+            // console.log(response.data.results[y].overview.length)
         } else {
             movieQuery()
         }
